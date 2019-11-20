@@ -1,12 +1,11 @@
-import java.time.Year;
 
 public class Car {
     private String model;
-    private Year manufacturingYear;
+    private int manufacturingYear;
     private int drivenKM;
     private double price;
 
-    public Car(String model, Year manufacturingYear, int drivenKM, double price) {
+    public Car(String model, int manufacturingYear, int drivenKM, double price) {
         this.model = model;
         this.manufacturingYear = manufacturingYear;
         this.drivenKM = drivenKM;
@@ -17,7 +16,7 @@ public class Car {
         return model;
     }
 
-    public Year getManufacturingYear() {
+    public int getManufacturingYear() {
         return manufacturingYear;
     }
 
@@ -30,7 +29,7 @@ public class Car {
     }
 
     public String toString(){
-        return this.getModel() + this.getManufacturingYear() + this.getDrivenKM() + this.getPrice();
+        return this.getModel() + "\n" + this.getManufacturingYear() + "\n" + this.getDrivenKM() + "\n" + this.getPrice() + "\n";
     }
 
     public boolean equalTo(Car c){
